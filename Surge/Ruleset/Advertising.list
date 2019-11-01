@@ -541,7 +541,7 @@ URL-REGEX,^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd
 # > 丁香医生
 URL-REGEX,^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch
 # > 嘀嗒出行
-URL-REGEX,^https?:\/\/capis(-clb)?\.didapinche\.com\/ad\/
+URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/
 URL-REGEX,^https?:\/\/www\.didapinche\.com\/app\/adstat\/
 
 # E
