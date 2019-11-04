@@ -18,7 +18,7 @@ Clash、Kitsunebi、Mellow、Potatso、Quantumult(X)、Shadowrocket、Pepi(Shado
 在标准版的基础上加入：
 
 - 拦截运营商劫持
-- 拦截臭名昭著的欺诈网站（如**思杰马克丁**伪造的一系列软件官网、MacKeeper等）
+- 拦截臭名昭著的欺诈网站（如**思杰马克丁**伪造的一系列软件官网、MacKeeper 等）
 - 拦截应用广告
   ⚠️ 网页广告请使用 Safari 内容拦截器如 [ADGuard](https://apps.apple.com/app/apple-store/id1047223162) 或集成去广告功能的浏览器
 - TikTok 解锁
@@ -150,7 +150,16 @@ Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/F
 
 > 4.如何解锁 TikTok？
 
-仅支持 Surge 和 Quantumult(X) 专业版规则。另外，复写规则默认设置的 TikTok 为日本区，若想切换到其他地区，在软件里的复写设置中将「JP」修改成其他地区英文缩写即可。
+1. 仅支持 Surge 和 Quantumult(X) 专业版规则。
+2. 建议下载香港区域的 TikTok，如美国区域的 TikTok 据反馈存在换区「无效」的问题。
+3. TikTok 区域设置与 Rewrite 规则有关（也就是说和 IP、商店无关），默认设置为日本区域，若想更换到其他地区需要修改规则，Quantumult X 因「引用的资源不可修改」需要在「编辑」的 `[rewrite_local]`  里如下添加规则
+
+```
+[rewrite_local]
+(?<=(carrier|account|sys)_region=)CN url 307 JP
+```
+
+其中「JP」即为区域，修改成其他区域如「HK」即可，Surge 或 Quantumult 图形化界面完善，直接在图形界面中找到上述规则修改即可。
 
 > 5.Apple News 具体怎么使用
 
@@ -214,7 +223,7 @@ Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/F
 
 **4.其他**
 
-> Youtube 去广告会造成以下问题
+> Youtube 去视频广告会造成以下问题
 
 - 网页版可能无法正常播放
 - YouTube Premium 用户无法正常播放
@@ -225,6 +234,8 @@ Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/F
 ```
 *.googlevideo.com
 ```
+
+⚠️ 注意：如果开启了代理服务器的「UDP 转发」会失效。
 
 ------
 
